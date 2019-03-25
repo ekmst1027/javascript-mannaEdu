@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var myArray = [10, 100, 88, 77, 99, 200];
+myArray.sort();	// 정렬(기본적으로 문자열 기준으로 정렬됨)
+document.write("문자열기준 : " + myArray + "<br>");
+// function(a, b) a-b<0 => 그대로, a-b>0 => 자리바꿈, a==b 그대로
+myArray.sort(function(a,b) {return a-b;});
+document.write("오름차순 : " + myArray + "<br>");	// 숫자 기준 오름차순 정렬
+myArray.sort(function(a,b) {return b-a});
+document.write("내림차순 : " + myArray + "<br>");	// 숫자 기준 내림차순 정렬
+
+document.write(myArray + "<br>");
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var newArray = numbers.slice(5);
+document.write(newArray + "<br>");
+var newArray2 = numbers.slice(5, 8);
+document.write(newArray2 + "<br>");
+
+var result = numbers.join(";");
+document.write(typeof(numbers) + "<br>");
+document.write(typeof(result) + "<br>");
+document.write(result + "<br>");
+
+var result2 = result.split("-");
+document.write(result2 + "<br>");
+document.write(typeof(result2));
+</script>
+</head>
+<body>
+
+</body>
+</html>

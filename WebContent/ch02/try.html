@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function test() {
+	try {
+		// 예외가 발생할 가능성이 있는 코드
+		allert("Hello");
+	} catch(error) {
+		// 예외가 발생했을 때의 코드
+		// error.message 오류 메시지
+		msg = "오류 발생 : " + error.message;
+		alert(msg);
+	} finally {
+		// 항상 실행되는 코드
+		alert("종료되었습니다.");
+	}
+}
+test();
+</script>
+</head>
+<body>
+
+</body>
+</html>

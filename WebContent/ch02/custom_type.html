@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var myCar = {
+	maker : "BMW",
+	model : "X5",
+	year : 2013,
+	speed : 60,
+	speedDown: function() { this.speed -= 10; },
+	speedUp: function() { this.speed += 10; }
+};
+myCar.speedUp();
+document.write(myCar["speed"] + "<br>");
+document.write(myCar["maker"] + "<br>");
+document.write(myCar["year"] + "<br>");
+document.write(myCar.make + "<br>");
+document.write(myCar.model + "<br>");
+document.write(myCar.year + "<br>");
+var txt = "";
+for(var x in myCar) {
+	txt += myCar[x] + " ";
+}
+document.write(txt);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//a 변수에 배열 참조변수가 입력됨
+function printArray(a) {
+	for(i = 0; i < a.length; i++) {
+		document.write(a[i] + " ");
+	}
+	document.write("<br>");
+}
+
+var myArray0 = new Array();
+myArray0[0] = ["사과1", "바나나1", "오렌지1"];
+myArray0[1] = ["사과2", "바나나2", "오렌지2"];
+myArray0[2] = ["사과3", "바나나3", "오렌지3"];
+console.log(typeof(myArray0));
+
+var myArray1 = [["사과1", "바나나1", "오렌지1"], 
+				["사과2", "바나나2", "오렌지2"], 
+				["사과3", "바나나3", "오렌지3"]];
+document.write("2차원 배열<br>");
+for(i = 0; i < myArray1.length; i++) {
+	for(j = 0; j < myArray1[i].length; j++) {
+		document.write(myArray1[i][j] + "<br>");
+	}
+}
+
+var myArray2 = new Array("사과", "바나나", "오렌지");
+printArray(myArray0);
+printArray(myArray1);
+printArray(myArray2);
+</script>
+</head>
+<body>
+
+</body>
+</html>

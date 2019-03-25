@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+count1 = new Number(1.237);
+count2 = 1.233;
+
+document.write(typeof(count1) + ":" + count1 + "<br>");
+document.write(typeof(count2) + ":" + count2 + "<br>");
+
+// Math.round() : 정수만 리턴(반올림)
+document.write(Math.round(count1) + "<br>");
+document.write(Math.round(count2) + "<br>");
+// 실수.toFixed(소수이하자리수) : 반올림함수
+document.write(count1.toFixed(2) + "<br>");
+document.write(count2.toFixed(2) + "<br>");
+if(count1.toFixed(2) == count2.toFixed(2)) {
+	alert("소수 2째 자리까지 같습니다.");
+} else {
+	alert("같지 않습니다.");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

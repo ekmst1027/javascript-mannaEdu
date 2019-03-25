@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="clock"></div>
+	<script>
+		function setClock() {
+			var now = new Date();
+			// getFullYear() : 4자리 연도
+			var s = now.getFullYear() + "-" + (now.getMonth() + 1) + "-"
+					+ now.getDate() + " " + now.getHours() + ":"
+					+ now.getMinutes() + ":" + now.getSeconds();
+			document.getElementById("clock").innerHTML = s;
+		}
+		// setInterval("함수이름()", 호출간격)
+		setInterval("setClock()", 1000); 	// 반복 호출
+	</script>
+</body>
+</html>
