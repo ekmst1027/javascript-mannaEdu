@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function test(x, y) {
+	// parseInt(문자열) : 문자열에서 숫자를 뽑아냄
+	document.write(typeof(x) + "," + typeof(y) + "<br>");
+	x = parseInt(x);	
+	y = parseInt(y);
+	document.write(typeof(x) + "," + typeof(y) + "<br>");
+	document.write(x + y + "<br>");
+	document.write(x - y + "<br>");
+	document.write(x * y + "<br>");
+	document.write(x / y + "<br>");
+	document.write(x % y + "<br>");	// 나머지
+}
+</script>
+</head>
+<body>
+	<form name="form1">
+		a : <input type="text" name="a" size="10">
+		b : <input type="text" name="b" size="10">
+		<br>
+		<input type="button" value="확인" onclick="test(document.form1.a.value, document.form1.b.value)">
+	</form>
+</body>
+</html>
