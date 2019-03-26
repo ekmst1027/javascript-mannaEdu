@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 웹문서의 배경색상 변경
+function changeColor(color) {
+	// id가 target인 태그의 배경색 변경
+	document.getElementById("target").style.backgroundColor = color;
+}
+
+function changeText(color) {
+	// id가 target인 태그의 글자색 변경
+	document.getElementById("target").style.color = color;
+}
+
+function viewDate() {
+	var now = new Date();	// 현재 시각의 날짜 객체 생성
+	var display = now.toLocaleString();	// 한국어 날짜 형식
+	// id가 time인 태그의 내부 영역에 html 출력
+	document.getElementById("time").innerHTML = display;
+	// 타이머 설정, 1초마다 viewDate() 함수가 호출됨
+	window.setTimeout("viewDate()", 1000);
+}
+</script>
+</head>
+<!-- onload : 현재 페이지의 로딩이 완료되었을 때 -->
+<body id="target" onload="viewDate()">
+	<h2>배경색상 변경(click event)</h2>
+	<div id="time"></div>
+	<input type="button" value="green" onclick="changeColor('green'); changeText('white')" />
+	<input type="button" value="yellow" onclick="changeColor('yellow'); changeText('#ff0000')" />
+	<input type="button" value="blue" onclick="changeColor('#0000ff'); changeText('#ffff00')" />
+</body>
+</html>

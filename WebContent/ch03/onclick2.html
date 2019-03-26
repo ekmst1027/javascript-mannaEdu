@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function change(img) {
+	document.body.style.backgroundImage = "url("+img+")";
+}
+</script>
+<style>
+/* 배경이미지 url('이미지경로') */
+body {
+	background-image: url('../images/bg4.gif')
+}
+</style>
+</head>
+<body>
+	<h2>배경이미지 바꾸기</h2>
+	<input type="button" value="배경1" onclick="change('../images/bg3.gif')">
+	<input type="button" value="배경2" onclick="change('../images/bg4.gif')">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function winopen() {
+	// 태그의 id가 dan인 태그에 입력된 값
+	var dan = document.getElementById("dan").value;
+	// 팝업창을 열면서 dan 변수에 값을 전달
+	window.open("gugu.jsp?dan=" + dan, "a", "width=300, height=400");
+}
+</script>
+</head>
+<body>
+	<form name="form1">
+		단을 입력하세요
+		<input type="text" id="dan" name="dan" value="3" size="10">
+		<input type="button" value="팝업창 열기" onclick="winopen()">
+	</form>
+</body>
+</html>
