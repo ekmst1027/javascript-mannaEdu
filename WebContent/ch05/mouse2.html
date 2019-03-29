@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div.out {
+	width: 250px;
+	height: 60px;
+	background-color: yellow;
+}
+</style>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+	var i = 0;
+	// mouseover 이벤트
+	$("div.out").mouseover(function() {
+		// 첫번째 p 태그의 내부 텍스트 변경
+		$("p:first").text("mouse over");
+		// 마지막 p 태그의 내부 텍스트 변경
+		$("p:last").text(++i);
+	});
+	// mouseout 이벤트
+	$("div.out").mouseout(function() {
+		$("p:first").text("마우스를 여기로 움직이세요.");
+	});
+})
+</script>
+</head>
+<body>
+	<div class="out">
+		<p>마우스를 여기로 움직이세요.</p>
+		<p>0</p>
+	</div>
+	<div>두번째 div</div>
+</body>
+</html>

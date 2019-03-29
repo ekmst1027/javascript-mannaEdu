@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+	$("#button1").click(function() {
+		// 선택자.val() : 태그에 입력된 값
+		var name = $("#name").val();	// 읽기
+		alert(name);
+		name = prompt("이름을 입력하세요", "아무개");
+		$("#name").val(name);	// 쓰기
+		
+		// attribute : 속성
+		// 태그.attr("속성이름"); : 속성 읽기 함수
+		// 태그.attr("속성이름", "변경할 값"); : 속성 변경 함수
+		$("#img1").attr("src", "../images/apple.gif");
+		
+		// 이미지의 사이즈 변경
+		$("#img1").attr({
+			"width" : "300px",
+			"height" : "300px"
+		});
+		
+		/* $("#img1").attr("width", "400px");
+		$("#img1").attr("height", "300px"); */
+		var img = $("#img1").attr("src");
+	});
+});
+</script>
+</head>
+<body>
+	이름 : <input id="name" value="">
+	<br>
+	<!--  <button id="text" onclick="check()">확인</button> -->
+	<img id="img1" src="../images/tomato.jpg">
+	<br>
+	<button id="button1">확인</button>
+</body>
+</html>

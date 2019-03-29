@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 다운로드받은 jquery 파일을 연결하는 방법 -->
+<!-- <script src="../include/jquery-3.3.1.min.js"></script> -->
+<!-- jquery 사이트의 jquery 파일을 연결하는 방법(인터넷 연결이 필요함) -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+// $(document).ready(function(){});
+// $(선택).이벤트(동작)
+// 페이지 로딩 완료 후 자동으로 호출되는 코드
+$(function(){
+	$("h2").click(function(){
+		$(this).hide();
+	})
+});
+</script>
+
+</head>
+<body>
+	<h2>첫번째 h2</h2>
+	<h2>두번째 h2</h2>
+	<h2>세번째 h2</h2>
+</body>
+</html>

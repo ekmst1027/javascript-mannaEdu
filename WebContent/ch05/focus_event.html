@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+// 페이지가 로딩될 때 자동으로 실행되는 코드
+$(function() {
+	// 입력포커스를 얻을 때
+	$("input").focus(function() {
+		// 선택자.css("스타일속성", "값")
+		$(this).css("background-color", "yellow");
+		$(this).css("border", "3px dotted red");
+	});
+	// 입력포커스를 잃을 때
+	$("input").blur(function() {
+		$(this).css("background-color", "white");
+		$(this).css("border", "1px solid black");
+	});
+});
+</script>
+</head>
+<body>
+	아이디 <input type="text" name="name">
+</body>
+</html>

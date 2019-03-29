@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+// 	// 마우스가 이미지 영역을 벗어날 때
+// 	$("img").mouseout(function() {
+// 		// 선택자.attr("속성", "값") : 요소의 속성을 변경시킴
+// 		$("img").attr("src", "../images/i0075.gif");
+// 	});
+// 	// 마우스가 이미지 위에 올라갈 때
+// 	$("img").mouseover(function() {
+// 		$("img").attr("src", "../images/i0076.gif");
+// 	});
+// 	// 이미지를 클릭할 때
+// 	$("img").click(function() {
+// 		$("img").attr("src", "../images/i0073.gif");
+// 	});
+	// 선택자.bind({ 이벤트종류: 함수 })
+	$("img").bind({
+		mouseout: function() {
+			$("img").attr("src", "../images/i0075.gif");
+		},
+		mouseover: function() {
+			$("img").attr("src", "../images/i0076.gif");
+		},
+		click: function() {
+			$("img").attr("src", "../images/i0073.gif");
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<img src="../images/i0075.gif">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+// 페이지 로딩이 완료되면 자동으로 실행되는 코드
+$(function() {
+	// li 태그 중에서 첫번째 요소
+	// 선택자.css("속성", "값")
+	$("li:first-of-type").css("background-color", "yellow");
+	$("li:last-of-type").css("background-color", "pink");
+});
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul>
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3 </li>
+	</ul>
+	<ul>
+		<li>내용4</li>
+		<li>내용5</li>
+		<li>내용6</li>
+	</ul>
+</body>
+</html>

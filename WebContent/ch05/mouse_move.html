@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h2 {
+	color: red;
+}
+</style>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+$(document).mousemove(function(e) {
+	console.log(e);
+	$("#log").html("<h2 style='color:red'> x : " + 
+			e.pageX + ", y : " + e.pageY + "</h2>");
+});
+</script>
+</head>
+<body>
+	<div id="log"></div>
+</body>
+</html>
