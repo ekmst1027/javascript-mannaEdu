@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+	// getJson("json파일", 콜백함수)
+	// 콜백함수 : function(json객체배열, 처리상태)
+	// json 파일을 읽어서 파싱한 후 화면 출력
+	$.getJSON("student.json",
+			function(data, textStatus) {
+		console.log("data : " + data);
+		console.log("textStatus : " + textStatus);
+		$("#students").append(
+				"<tr><td>번호</td><td>이름</td><td>전화</td></tr>");
+		// 반복처리되는 부분
+		$.each(data, function() {
+			$("#students").append(
+					"<tr><td>" + this.num + "</td>"
+					+ "<td>" + this.name + "</td>"
+					+ "<td>" + this.tel + "</td></tr>"				
+					);
+		});
+	});
+});
+</script>
+</head>
+<body>
+	<!-- json 데이터를 파싱하여 테이블로 출력 -->
+	<table id="students" style="width:500px;" border="1">
+	</table>
+</body>
+</html>

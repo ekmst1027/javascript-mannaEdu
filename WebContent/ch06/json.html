@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+	var s = "[{'name' : 'Hong', 'age' : '21'}, {'name' : 'Kim', 'age' : '25'}, {'name' : 'park', 'age' : '30'}]";
+	console.log("s : " + s);
+	console.log("type : " + typeof(s));
+	// 스트링을 json 객체배열 형식으로 변환함
+	// eval(자바스크립트코드) : 자바스크립트 문장 해석 함수
+	var students = eval(s);
+	console.log("students : " + students);
+	console.log("type : " + typeof(students));
+	students[1].name = "Lee";
+	var name = "";
+	var age = "";
+	for(i = 0; i < students.length; i++) {
+		name += students[i].name + " ";
+		age += students[i].age + " ";
+	}
+	$("#name").html(name);
+	$("#age").html(age);
+});
+</script>
+</head>
+<body>
+	<h4>학생 명단</h4>
+	<p style="background-color: yellow;">
+		이름: <span id="name"></span>&nbsp; 나이 : <span id="age"></span>
+	</p>
+</body>
+</html>
