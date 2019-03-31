@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+#page {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+#header {
+	height: 50px;
+	background-color: yellow;
+}
+
+#main {
+	width: 600px;
+	float: left;
+	background-color: aqua;
+}
+
+#sidebar {
+	width: 300px;
+	float: right;
+	background-color: aliceblue;
+}
+
+#footer {
+	clear: both;
+	background-color: coral;
+}
+
+#header, #main, #sidebar, #footer {
+	border: solid 1px red;
+	
+}
+
+/* 미디어 쿼리
+다양한 미디어 타입(all, print, projection, screen, speech, tv 등) */
+@media screen and (max-width: 980px) {
+	#page {
+		width: 94%;
+	}
+	#main {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#main {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+#media screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<h2>Header</h2>
+		</div>
+		<div id="main">
+			<h2>Main</h2>
+			데스크탑을 위해 디자인된 웹페이지는...
+			데스크탑을 위해 디자인된 웹페이지는...
+			데스크탑을 위해 디자인된 웹페이지는...
+			데스크탑을 위해 디자인된 웹페이지는...
+			데스크탑을 위해 디자인된 웹페이지는...
+			데스크탑을 위해 디자인된 웹페이지는...
+		</div>
+		<div id="sidebar">
+			<h2>Slider</h2>
+			<ul>
+				<li>Fluid Grids</li>
+				<li>Media Queries</li>
+			</ul>
+		</div>
+		<div id="footer">
+				<h2>Footer</h2>
+		</div>
+	</div>
+</body>
+</html>
